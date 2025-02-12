@@ -1,0 +1,156 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "password": "123456",
+      "img": "https://images.pexels.com/photos/3584924/pexels-photo-3584924.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "phone": "9876235675",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "654321",
+      "img": "https://images.pexels.com/photos/3584924/pexels-photo-3584924.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "phone": "9876235675",
+      "status": "block"
+    },
+    {
+      "id": "3",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "password": "654321",
+      "img": "https://images.pexels.com/photos/3584924/pexels-photo-3584924.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "phone": "9876235675",
+      "status": "unblock"
+    },
+    {
+      "id": "1739268417407",
+      "name": "khushbu",
+      "email": "khushbu@gmail.com",
+      "password": "123456",
+      "img": "https://images.pexels.com/photos/3584924/pexels-photo-3584924.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "phone": "8128965103",
+      "status": "unblock"
+    }
+  ],
+  "propertylist": [
+    {
+      "id": "1",
+      "hometype": "Villa",
+      "propertytype": "For Sell",
+      "img": "http://localhost:5173/img/property-2.jpg",
+      "price": "12,543",
+      "name": "Golden Urban House For Sell",
+      "location": "123 Street, New York, USA",
+      "room": "3",
+      "bath": "2",
+      "yard": "1000 Sqft"
+    },
+    {
+      "id": "2",
+      "hometype": "Appartment",
+      "propertytype": "For Rent",
+      "img": "http://localhost:5173/img/property-1.jpg",
+      "price": "543",
+      "name": "Golden Urban Appartment For Sell",
+      "location": "123 Street,gujarat,india",
+      "room": "4",
+      "bath": "3",
+      "yard": "1200 Sqft"
+    },
+    {
+      "id": "3",
+      "hometype": "Office",
+      "propertytype": "For Sell",
+      "img": "http://localhost:5173/img/property-3.jpg",
+      "price": "700",
+      "name": "Golden Urban Office For Sell",
+      "location": "123 Street,surat,india",
+      "room": "4",
+      "bath": "3",
+      "yard": "1200 Sqft"
+    },
+    {
+      "id": "4",
+      "hometype": "Home",
+      "propertytype": "For Rent",
+      "img": "http://localhost:5173/img/property-5.jpg",
+      "price": "700",
+      "name": "Golden Urban House For Sell",
+      "location": "123 Street,Ahemdabad,india",
+      "room": "4",
+      "bath": "3",
+      "yard": "1200 Sqft"
+    },
+    {
+      "id": "1738839805582",
+      "hometype": "Office",
+      "propertytype": "For Rent",
+      "img": "https://www.free-css.com/assets/files/free-css-templates/preview/page295/makaan/assets/img/property-6.jpg",
+      "price": "10,345",
+      "name": "Golden Urban Office For Sell",
+      "location": "Ahmedabad, India",
+      "room": "4",
+      "bath": "3",
+      "yard": "1000 Sqft"
+    }
+  ],
+  "propertytype": [
+    {
+      "id": "1",
+      "img": "http://localhost:5173/img/icon-apartment.png",
+      "propertytype": "Apartment",
+      "totalproperties": "123"
+    },
+    {
+      "id": "2",
+      "img": "http://localhost:5173/img/icon-villa.png",
+      "propertytype": "Villa",
+      "totalproperties": "120"
+    },
+    {
+      "id": "3",
+      "img": "http://localhost:5173/img/icon-house.png",
+      "propertytype": "Home",
+      "totalproperties": "130"
+    },
+    {
+      "id": "4",
+      "img": "http://localhost:5173/img/icon-housing.png",
+      "propertytype": "Office",
+      "totalproperties": "123"
+    }
+  ],
+  "propertyagent": [
+    {
+      "id": "1",
+      "img": "http://localhost:5173/img/team-1.jpg",
+      "name": "Full Name",
+      "designation": "Designation"
+    },
+    {
+      "id": "2",
+      "img": "http://localhost:5173/img/team-2.jpg",
+      "name": "Full Name",
+      "designation": "Designation"
+    },
+    {
+      "id": "3",
+      "img": "http://localhost:5173/img/team-3.jpg",
+      "name": "Full Name",
+      "designation": "Designation"
+    }
+  ]
+}
