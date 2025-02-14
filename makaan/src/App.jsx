@@ -19,6 +19,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Login from "./Website/Pages/Login";
 import Register from "./Website/Pages/Register";
 import UserList from "./Admin/Apages/UserList";
+import Profile from "./Website/Pages/Profile";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
 
           {/* Notfound */}
           <Route path="*" element={<Notfound />} />

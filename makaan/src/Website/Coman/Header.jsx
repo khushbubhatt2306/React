@@ -97,7 +97,7 @@ function Header() {
               if (localStorage.getItem("userid")) {
                 return (
                   <>
-                    <NavLink className="nav-item nav-link">
+                    <NavLink to="/profile" className="nav-item nav-link">
                       hello..{localStorage.getItem("username")}
                     </NavLink>
                   </>

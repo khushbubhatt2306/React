@@ -24,7 +24,7 @@
       "password": "654321",
       "img": "https://images.pexels.com/photos/3584924/pexels-photo-3584924.jpeg?auto=compress&cs=tinysrgb&w=600",
       "phone": "9876235675",
-      "status": "block"
+      "status": "unblock"
     },
     {
       "id": "3",
@@ -37,7 +37,7 @@
     },
     {
       "id": "1739268417407",
-      "name": "khushbu",
+      "name": "khushbu Bhatt",
       "email": "khushbu@gmail.com",
       "password": "123456",
       "img": "https://images.pexels.com/photos/3584924/pexels-photo-3584924.jpeg?auto=compress&cs=tinysrgb&w=600",

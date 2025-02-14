@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AHeader from "../Acoman/AHeader";
 import { MDBTable, MDBTableHead, MDBTableBody } from "mdb-react-ui-kit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function UserList() {
   const [userlist, setuserlist] = useState();
@@ -33,6 +34,75 @@ function UserList() {
     setviewdata(res.data);
   };
 
+  // delete data
+  const deletedata = async (id) => {
+    try {
+      const res = await axios.delete(`http://localhost:3000/users/${id}`);
+      console.log(res.data);
+      getuserdata();
+    } catch (error) {
+      console.log("Error deleting property", error);
+    }
+  };
+
+  // Status change
+  // const statushandle = async (id) => {
+  //   const res = await axios.get(`http://localhost:3000/users/${id}`);
+  //   const currentstatus = res.data.status;
+
+  //   try {
+  //     if (currentstatus === "block") {
+  //       const res = await axios.patch(`http://localhost:3000/users/${id}`, {
+  //         status: "unblock",
+  //       });
+  //       console.log(res.data);
+  //       {
+  //         if (res.status === 200) {
+  //           toast.success("unblock successfully");
+  //           getuserdata();
+  //         }
+  //       }
+  //     } else if (currentstatus === "unblock") {
+  //       const res = await axios.patch(`http://localhost:3000/users/${id}`, {
+  //         status: "block",
+  //       });
+
+  //       {
+  //         if (res.status === 200) {
+  //           toast.success("block successfully");
+  //           getuserdata();
+  //         }
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.log("Status Error", error);
+  //   }
+  // };
+
+  const statushandle = async (id) => {
+    try {
+      // Fetch the current user data
+      const res = await axios.get(`http://localhost:3000/users/${id}`);
+      const currentStatus = res.data.status;
+
+      // Toggle status
+      const newStatus = currentStatus === "block" ? "unblock" : "block";
+
+      // Update status
+      const updateRes = await axios.patch(`http://localhost:3000/users/${id}`, {
+        status: newStatus,
+      });
+
+      if (updateRes.status === 200) {
+        toast.success(`${newStatus} successfully`);
+        getuserdata(); // Refresh the user list
+      }
+    } catch (error) {
+      console.error("Status Update Error:", error);
+      toast.error("Failed to update status");
+    }
+  };
+
   return (
     <div>
       <AHeader />
@@ -46,9 +116,8 @@ function UserList() {
               <th scope="col">Email</th>
               <th scope="col">Image</th>
               <th scope="col">Phone</th>
-              <th scope="col" className="text-center">
-                Action
-              </th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
             </tr>
           </MDBTableHead>
           <MDBTableBody>
@@ -71,6 +140,14 @@ function UserList() {
                     <td>{phone}</td>
                     <td>
                       <button
+                        className="btn btn-success"
+                        onClick={() => statushandle(id)}
+                      >
+                        {status}
+                      </button>
+                    </td>
+                    <td>
+                      <button
                         className="btn btn-primary"
                         data-bs-toggle="modal"
                         href="#exampleModalToggle"
@@ -78,7 +155,13 @@ function UserList() {
                       >
                         View
                       </button>
-                      <button className="btn btn-success mx-2">{status}</button>
+
+                      <button
+                        className="btn btn-danger mx-2"
+                        onClick={() => deletedata(id)}
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 );
